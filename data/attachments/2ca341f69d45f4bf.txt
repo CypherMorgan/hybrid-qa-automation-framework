@@ -1,0 +1,10 @@
+INFO     conftest:conftest.py:24 Starting browser: firefox
+INFO     WDM:logger.py:11 ====== WebDriver manager ======
+INFO     WDM:logger.py:11 Driver [/home/runner/.wdm/drivers/geckodriver/linux64/v0.37.0/geckodriver] found in cache by browser version
+INFO     conftest:conftest.py:30 Opening URL: https://demowebshop.tricentis.com
+INFO     conftest:conftest.py:37 Closing browser
+INFO     conftest:conftest.py:24 Starting browser: firefox
+INFO     WDM:logger.py:11 ====== WebDriver manager ======
+INFO     WDM:logger.py:11 Driver [/home/runner/.wdm/drivers/geckodriver/linux64/v0.37.0/geckodriver] found in cache by browser version
+INFO     conftest:conftest.py:30 Opening URL: https://demowebshop.tricentis.com
+INFO     conftest:conftest.py:37 Closing browser
