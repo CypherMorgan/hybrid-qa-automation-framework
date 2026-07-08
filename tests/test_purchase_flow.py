@@ -4,6 +4,7 @@ from pages.product_page import ProductPage
 from pages.cart_page import CartPage
 from pages.login_page import LoginPage
 from config.config_reader import ConfigReader
+from utils.data_generator import product_search_term
 
 
 def test_purchase_flow(driver):
@@ -23,7 +24,8 @@ def test_purchase_flow(driver):
     cart.clear_cart()
 
     home = HomePage(driver)
-    home.search_product("computer")
+    term = product_search_term()
+    home.search_product(term)
 
     search = SearchPage(driver)
     search.open_first_product()

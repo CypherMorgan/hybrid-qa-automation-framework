@@ -1,10 +1,5 @@
 from selenium.webdriver.common.by import By
 from pages.base_page import BasePage
-import random
-
-
-def generate_email():
-    return f"user{random.randint(1000,9999)}@test.com"
 
 
 class RegisterPage(BasePage):

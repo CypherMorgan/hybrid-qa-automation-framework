@@ -39,6 +39,7 @@ This project demonstrates a **real-world, production-ready test automation frame
 * **GitHub Actions (CI/CD)**
 * **Logging Framework**
 * **Requests (API testing)**
+* **Faker (test data generation)**
 * **Postman + Newman**
 * **Hybrid Testing (UI + API)**
 
@@ -117,6 +118,7 @@ demowebshop-e2e-selenium-pytest
 │   ├── screenshot.py
 │   ├── wait_utils.py
 │   ├── data_loader.py
+│   ├── data_generator.py
 │   └── api_client.py
 │
 ├── postman
@@ -151,6 +153,7 @@ demowebshop-e2e-selenium-pytest
 * Retry mechanism for flaky tests
 * Stable execution in headless environments
 * API testing layer with reusable client
+* Faker-based test data generation (users, addresses, product terms)
 * Hybrid UI + API test flows
 * Postman collection execution via Newman
 * CI-safe API fallback mechanism (no external failures)
@@ -427,7 +430,6 @@ Actions → Latest Run → Artifacts → report.html
 * Contract testing (schema validation)
 * Mock API server integration
 * Dockerized execution
-* Test data management system
 
 ---
 

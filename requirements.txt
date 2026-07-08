@@ -7,3 +7,4 @@ pyyaml
 webdriver-manager
 allure-pytest
 requests
+Faker
