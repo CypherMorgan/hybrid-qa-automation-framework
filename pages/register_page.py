@@ -1,3 +1,4 @@
+import allure
 from selenium.webdriver.common.by import By
 from pages.base_page import BasePage
 
@@ -14,6 +15,7 @@ class RegisterPage(BasePage):
 
     SUCCESS_MESSAGE = (By.CLASS_NAME, "result")
 
+    @allure.step("Register user: {email}")
     def register_user(self, first, last, email, password):
 
         self.click(self.GENDER_MALE)
@@ -25,5 +27,6 @@ class RegisterPage(BasePage):
 
         self.click(self.REGISTER_BUTTON)
 
+    @allure.step("Get registration success message")
     def get_success_message(self):
         return self.get_text(self.SUCCESS_MESSAGE)
