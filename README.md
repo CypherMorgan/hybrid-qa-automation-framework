@@ -8,6 +8,7 @@
 ![CI](https://github.com/CypherMorgan/demowebshop-e2e-selenium-pytest/actions/workflows/tests.yml/badge.svg)
 ![Allure](https://img.shields.io/badge/Allure-Reporting-blueviolet)
 ![Browsers](https://img.shields.io/badge/browser-chrome%20%7C%20firefox-blue)
+![Docker](https://img.shields.io/badge/docker-ready-blue)
 [![Live Report](https://img.shields.io/badge/Allure-Report-blueviolet)](https://cyphermorgan.github.io/demowebshop-e2e-selenium-pytest/)
 ![Status](https://img.shields.io/badge/status-CI%20passing-brightgreen)
 ![Framework](https://img.shields.io/badge/framework-production--ready-success)
@@ -130,6 +131,8 @@ demowebshop-e2e-selenium-pytest
 │   └── allure-results/
 │
 ├── conftest.py
+├── Dockerfile
+├── .dockerignore
 ├── pytest.ini
 ├── requirements.txt
 └── README.md
@@ -156,6 +159,7 @@ demowebshop-e2e-selenium-pytest
 * Faker-based test data generation (users, addresses, product terms)
 * Hybrid UI + API test flows
 * Postman collection execution via Newman
+* Dockerized execution (Chrome + Firefox)
 * CI-safe API fallback mechanism (no external failures)
 
 ---
@@ -288,6 +292,19 @@ pytest --html=reports/report.html --self-contained-html
 
 ```bash
 pytest --alluredir=reports/allure-results
+```
+
+### Run with Docker:
+
+```bash
+docker build -t demowebshop-e2e .
+docker run --rm demowebshop-e2e
+```
+
+Run with Firefox instead:
+
+```bash
+docker run --rm -e BROWSER=firefox demowebshop-e2e
 ```
 
 ---
@@ -429,7 +446,6 @@ Actions → Latest Run → Artifacts → report.html
 
 * Contract testing (schema validation)
 * Mock API server integration
-* Dockerized execution
 
 ---
 

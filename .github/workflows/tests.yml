@@ -68,6 +68,14 @@ jobs:
           name: allure-results-${{ matrix.browser }}
           path: allure-results
 
+  docker-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build -t demowebshop-e2e .
+
   report:
     needs: test
     runs-on: ubuntu-latest
