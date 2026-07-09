@@ -1,6 +1,7 @@
 import allure
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import StaleElementReferenceException
 from config.config_reader import ConfigReader
 
 
@@ -12,8 +13,12 @@ class BasePage:
 
     @allure.step("Click element")
     def click(self, locator):
-        element = self.wait.until(EC.element_to_be_clickable(locator))
-        element.click()
+        try:
+            element = self.wait.until(EC.element_to_be_clickable(locator))
+            element.click()
+        except StaleElementReferenceException:
+            element = self.wait.until(EC.element_to_be_clickable(locator))
+            element.click()
 
     @allure.step("Type text: {text}")
     def type(self, locator, text):

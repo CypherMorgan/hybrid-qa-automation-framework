@@ -5,16 +5,13 @@ fake = Faker()
 
 # products that exist on demowebshop.tricentis.com
 KNOWN_PRODUCTS = [
-    "build your own computer",
-    "simple computer",
+    "computer",
     "laptop",
     "smartphone",
-    "tablet",
     "camera",
     "book",
     "jeans",
-    "shirt",
-    "shoes"
+    "shirt"
 ]
 
 def user_profile():
