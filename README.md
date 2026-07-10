@@ -5,11 +5,11 @@
 ![PyTest](https://img.shields.io/badge/pytest-framework-orange)
 ![Postman](https://img.shields.io/badge/Postman-Newman-orange)
 ![Hybrid](https://img.shields.io/badge/Hybrid-UI%20%2B%20API-purple)
-![CI](https://github.com/CypherMorgan/demowebshop-e2e-selenium-pytest/actions/workflows/tests.yml/badge.svg)
+![CI](https://github.com/CypherMorgan/hybrid-qa-automation-framework/actions/workflows/tests.yml/badge.svg)
 ![Allure](https://img.shields.io/badge/Allure-Reporting-blueviolet)
 ![Browsers](https://img.shields.io/badge/browser-chrome%20%7C%20firefox-blue)
 ![Docker](https://img.shields.io/badge/docker-ready-blue)
-[![Live Report](https://img.shields.io/badge/Allure-Report-blueviolet)](https://cyphermorgan.github.io/demowebshop-e2e-selenium-pytest/)
+[![Live Report](https://img.shields.io/badge/Allure-Report-blueviolet)](https://cyphermorgan.github.io/hybrid-qa-automation-framework/)
 ![Status](https://img.shields.io/badge/status-CI%20passing-brightgreen)
 ![Framework](https://img.shields.io/badge/framework-production--ready-success)
 
@@ -74,7 +74,7 @@ Configuration + Test Data
 # 📁 Project Structure
 
 ```
-demowebshop-e2e-selenium-pytest
+hybrid-qa-automation-framework
 │
 ├── .github/workflows
 │   └── tests.yml
@@ -244,13 +244,13 @@ newman run postman/collection.json
 Clone the repository:
 
 ```bash
-git clone https://github.com/CypherMorgan/demowebshop-e2e-selenium-pytest.git
+git clone https://github.com/CypherMorgan/hybrid-qa-automation-framework.git
 ```
 
 Navigate into the project:
 
 ```bash
-cd demowebshop-e2e-selenium-pytest
+cd hybrid-qa-automation-framework
 ```
 
 Install dependencies:
@@ -297,14 +297,14 @@ pytest --alluredir=reports/allure-results
 ### Run with Docker:
 
 ```bash
-docker build -t demowebshop-e2e .
-docker run --rm demowebshop-e2e
+docker build -t hybrid-qa-e2e .
+docker run --rm hybrid-qa-e2e
 ```
 
 Run with Firefox instead:
 
 ```bash
-docker run --rm -e BROWSER=firefox demowebshop-e2e
+docker run --rm -e BROWSER=firefox hybrid-qa-e2e
 ```
 
 ---
@@ -430,7 +430,7 @@ This project includes a fully working CI pipeline.
 # Test Reports
 
 ## Live Report (GitHub Pages)
-👉 https://cyphermorgan.github.io/demowebshop-e2e-selenium-pytest/
+👉 https://cyphermorgan.github.io/hybrid-qa-automation-framework/
 
 ## Report Preview
 ![Report](reports/report-preview.png)
